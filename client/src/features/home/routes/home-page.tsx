@@ -65,20 +65,20 @@ export function HomePage() {
           <h1 className="font-display text-[48px] leading-[1.08] tracking-[-0.02em] text-white md:text-[64px]">
             Thoughtful gifting for modern workplaces.
           </h1>
-          <p className="mx-auto mt-6 max-w-lg text-[18px] leading-[1.6] text-[#7a8984]">
+          <p className="mx-auto mt-6 max-w-lg text-[18px] leading-[1.6] text-[#c8d0cc]">
             Ajjoria creates thoughtful gifting experiences designed to make professional appreciation
             feel more meaningful.
           </p>
           <div className="mt-12 flex flex-col justify-center gap-4 sm:flex-row">
             <a
               href="#collections"
-              className="rounded-[0.125rem] bg-[#e7c185] px-10 py-4 text-xs font-semibold uppercase tracking-[0.1em] text-[#281900]"
+              className="rounded-[0.125rem] bg-[#e7c185] px-10 py-4 text-xs font-semibold uppercase tracking-[0.1em] text-[#281900] shadow-[0_18px_35px_rgba(20,16,8,0.18)] hover:-translate-y-0.5 hover:bg-[#edd09d]"
             >
               Explore Experiences
             </a>
             <a
               href="#contact"
-              className="rounded-[0.125rem] border border-[#e7c185]/40 px-10 py-4 text-xs font-semibold uppercase tracking-[0.1em] text-[#e7c185] hover:bg-[#e7c185]/10"
+              className="rounded-[0.125rem] border border-[#e7c185]/40 px-10 py-4 text-xs font-semibold uppercase tracking-[0.1em] text-[#e7c185] hover:-translate-y-0.5 hover:bg-[#e7c185]/10"
             >
               Let&apos;s Create Something Thoughtful
             </a>
@@ -94,18 +94,18 @@ export function HomePage() {
         </div>
       </section>
 
-      <section id="story" className="bg-background px-6 py-20 md:px-16">
+      <section id="story" className="section-spacing bg-background px-6 md:px-16">
         <div className="mx-auto grid max-w-[1280px] items-center gap-8 md:grid-cols-2">
           <div className="order-2 md:order-1">
             <img
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuBekNHlFLCPhEeFWJ18WNkZHTM5XAoTRwMsle32_bDW2ueCOgnynRfjC3DYttMgYE-W1o_nIp2XN7WPZ9H2UyiCAw1IhHH5uzyZMRbHRmp0K-4zKaUgRAUMJJngkCgtmEhRzbSzi5tLm-uO72P6NQtc2QiQHVldU6PVmY-yv8MdqBw6Q165mX5bgt6uqbbVs-Pc-y6Fa3cPyJu2P51y_PvkwIwclhUD5bSSnWBrdPuG_idXsJGE6a-Sh8eic9cIZAZ0GO-ZcrRJlQUI"
               alt="Editorial hospitality still life with ceramic cups and a journal."
-              className="aspect-[4/5] w-full rounded-[0.5rem] object-cover shadow-sm"
+              className="aspect-[4/5] w-full rounded-[0.5rem] object-cover shadow-[0_20px_45px_rgba(19,33,29,0.08)]"
             />
           </div>
 
           <div className="order-1 space-y-6 md:order-2">
-            <h2 className="font-display text-[40px] leading-[1.2] text-primary">Why We&apos;re Building Ajjoria</h2>
+            <h2 className="section-heading font-display text-primary">Why We&apos;re Building Ajjoria</h2>
             <div className="space-y-6">
               <p className="text-[18px] leading-[1.6] text-muted-foreground">
                 In a world of mass-produced novelties, we believe professional appreciation has lost its
@@ -120,7 +120,7 @@ export function HomePage() {
               <div className="pt-4">
                 <a
                   href="#contact"
-                  className="border-b border-[#765928] pb-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#765928] hover:border-primary hover:text-primary"
+                  className="link-underline text-xs font-semibold uppercase tracking-[0.18em] text-[#765928] hover:text-primary"
                 >
                   Read our narrative
                 </a>
@@ -130,33 +130,36 @@ export function HomePage() {
         </div>
       </section>
 
-      <section id="collections" className="bg-[#f5f3f2] px-6 py-20 md:px-16">
+      <section id="collections" className="section-spacing bg-[#f5f3f2] px-6 md:px-16">
         <div className="mx-auto mb-12 max-w-[1280px] text-center">
           <span className="text-xs font-semibold uppercase tracking-[0.18em] text-outline">Collections</span>
-          <h2 className="mt-2 font-display text-[40px] leading-[1.2] text-primary">Experience-Led Gifting</h2>
+          <h2 className="section-heading mt-2 font-display text-primary">Experience-Led Gifting</h2>
         </div>
         <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-6 md:grid-cols-3">
           {experiences.map((item) => (
-            <article key={item.title} className={`group relative overflow-hidden border border-border/70 bg-background ${item.className}`}>
+            <article
+              key={item.title}
+              className={`group relative overflow-hidden rounded-[0.35rem] border border-border/70 bg-background shadow-[0_16px_35px_rgba(19,33,29,0.05)] ${item.className}`}
+            >
               <img
                 src={item.image}
                 alt={item.title}
-                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.045] group-hover:-translate-y-1"
               />
-              <div className="absolute inset-0 bg-primary/24 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-primary via-primary/65 to-transparent p-8">
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/8 via-primary/12 to-primary/42 transition-opacity duration-500 group-hover:opacity-90" />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#0d1613] via-primary/80 to-transparent p-8">
                 <h3 className="font-display text-[28px] leading-[1.3] text-white">{item.title}</h3>
-                <p className="mt-1 text-base leading-[1.6] text-white/80">{item.description}</p>
+                <p className="mt-2 max-w-[22ch] text-base leading-[1.6] text-white/84">{item.description}</p>
               </div>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="overflow-hidden bg-background px-6 py-20 md:px-16">
+      <section className="section-spacing overflow-hidden bg-background px-6 md:px-16">
         <div className="mx-auto flex max-w-[1280px] flex-col gap-8 md:flex-row">
           <div className="self-center md:w-1/3">
-            <h2 className="font-display text-[40px] leading-[1.2] text-primary">Tactile Intentionality</h2>
+            <h2 className="section-heading font-display text-primary">Tactile Intentionality</h2>
             <p className="mt-6 text-base leading-[1.6] text-muted-foreground">
               We believe the unboxing is as important as the gift itself. Gold-foil details, layered
               textures, and hand-written notes define the Ajjoria experience.
@@ -164,11 +167,11 @@ export function HomePage() {
           </div>
           <div className="no-scrollbar flex gap-4 overflow-x-auto pb-8 md:w-2/3 md:gap-8">
             {showcaseImages.map((item) => (
-              <div key={item.image} className={`min-w-[300px] flex-shrink-0 ${item.offset}`}>
+              <div key={item.image} className={`group min-w-[300px] flex-shrink-0 ${item.offset}`}>
                 <img
                   src={item.image}
                   alt="Ajjoria detail"
-                  className="aspect-[3/4] w-full rounded-[0.25rem] object-cover shadow-sm"
+                  className="aspect-[3/4] w-full rounded-[0.25rem] object-cover shadow-[0_18px_40px_rgba(19,33,29,0.08)] transition-transform duration-700 ease-out group-hover:scale-[1.02]"
                 />
               </div>
             ))}
@@ -176,7 +179,7 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="bg-primary px-6 py-20 text-center text-primary-foreground md:px-16">
+      <section className="section-spacing bg-primary px-6 text-center text-primary-foreground md:px-16">
         <div className="mx-auto max-w-2xl space-y-6">
           <span className="material-symbols-outlined text-[48px] text-[#e7c185]">auto_awesome</span>
           <blockquote className="font-display text-[28px] leading-[1.4] italic text-[#f5f3f2] md:text-[40px] md:leading-[1.2]">
@@ -185,61 +188,80 @@ export function HomePage() {
           </blockquote>
           <div className="pt-4">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#e7c185]">Founding Statement</p>
-            <p className="mt-2 text-base leading-[1.6] text-[#7a8984]">Ajjoria Studio, London</p>
           </div>
         </div>
       </section>
 
-      <section id="contact" className="bg-background px-6 py-20 md:px-16">
-        <div className="mx-auto grid max-w-[1280px] items-start gap-8 md:grid-cols-2">
+      <section id="contact" className="section-spacing bg-background px-6 md:px-16">
+        <div className="mx-auto grid max-w-[1280px] items-start gap-10 md:grid-cols-2 md:gap-12">
           <div className="space-y-6">
-            <h2 className="font-display text-[40px] leading-[1.2] text-primary">
+            <h2 className="section-heading font-display text-primary">
               Let&apos;s create something thoughtful together.
             </h2>
             <p className="text-[18px] leading-[1.6] text-muted-foreground">
               Whether you&apos;re welcoming 500 new hires or thanking 10 key clients, we bring the same
               level of curation and care to every project.
             </p>
-            <div className="space-y-4 pt-4">
-              <div className="flex items-center gap-4 text-muted-foreground">
-                <span className="material-symbols-outlined">mail</span>
-                <span className="text-base leading-[1.6]">studio@ajjoria.com</span>
+            <div className="space-y-5 pt-4">
+              <div className="flex items-start gap-4 text-muted-foreground">
+                <span className="material-symbols-outlined mt-0.5 text-[21px] text-[#8e7652]">mail</span>
+                <a
+                  href="mailto:ajjoria.shoppe@gmail.com"
+                  className="link-underline text-base leading-[1.6] text-muted-foreground hover:text-primary"
+                >
+                  ajjoria.shoppe@gmail.com
+                </a>
               </div>
-              <div className="flex items-center gap-4 text-muted-foreground">
-                <span className="material-symbols-outlined">location_on</span>
-                <span className="text-base leading-[1.6]">Mayfair, London</span>
+              <div className="flex items-start gap-4 text-muted-foreground">
+                <span className="material-symbols-outlined mt-0.5 text-[21px] text-[#8e7652]">location_on</span>
+                <span className="text-base leading-[1.6]">Dehradun, India</span>
               </div>
             </div>
           </div>
 
-          <form className="space-y-8 border border-border/50 bg-white p-6 md:p-16">
-            <div className="space-y-2">
+          <form className="luxury-panel space-y-8 rounded-[0.5rem] p-6 md:p-12">
+            <div className="space-y-2.5">
               <label className="text-xs font-semibold uppercase tracking-[0.1em] text-outline">Name</label>
-              <input type="text" className="w-full border-0 border-b border-border bg-transparent px-0 py-2 text-base focus:border-[#e7c185] focus:outline-none" />
+              <input
+                type="text"
+                className="w-full border-0 border-b border-border bg-transparent px-0 py-3 text-base text-primary focus:border-[#c8a46b] focus:outline-none"
+              />
             </div>
-            <div className="space-y-2">
+            <div className="space-y-2.5">
               <label className="text-xs font-semibold uppercase tracking-[0.1em] text-outline">Company</label>
-              <input type="text" className="w-full border-0 border-b border-border bg-transparent px-0 py-2 text-base focus:border-[#e7c185] focus:outline-none" />
+              <input
+                type="text"
+                className="w-full border-0 border-b border-border bg-transparent px-0 py-3 text-base text-primary focus:border-[#c8a46b] focus:outline-none"
+              />
             </div>
             <div className="grid gap-8 md:grid-cols-2">
-              <div className="space-y-2">
+              <div className="space-y-2.5">
                 <label className="text-xs font-semibold uppercase tracking-[0.1em] text-outline">Email</label>
-                <input type="email" className="w-full border-0 border-b border-border bg-transparent px-0 py-2 text-base focus:border-[#e7c185] focus:outline-none" />
+                <input
+                  type="email"
+                  className="w-full border-0 border-b border-border bg-transparent px-0 py-3 text-base text-primary focus:border-[#c8a46b] focus:outline-none"
+                />
               </div>
-              <div className="space-y-2">
+              <div className="space-y-2.5">
                 <label className="text-xs font-semibold uppercase tracking-[0.1em] text-outline">Volume</label>
-                <input type="text" className="w-full border-0 border-b border-border bg-transparent px-0 py-2 text-base focus:border-[#e7c185] focus:outline-none" />
+                <input
+                  type="text"
+                  className="w-full border-0 border-b border-border bg-transparent px-0 py-3 text-base text-primary focus:border-[#c8a46b] focus:outline-none"
+                />
               </div>
             </div>
-            <div className="space-y-2">
+            <div className="space-y-2.5">
               <label className="text-xs font-semibold uppercase tracking-[0.1em] text-outline">
                 Tell us about your requirement
               </label>
-              <textarea rows={3} className="w-full resize-none border-0 border-b border-border bg-transparent px-0 py-2 text-base focus:border-[#e7c185] focus:outline-none" />
+              <textarea
+                rows={4}
+                className="w-full resize-none border-0 border-b border-border bg-transparent px-0 py-3 text-base text-primary focus:border-[#c8a46b] focus:outline-none"
+              />
             </div>
             <button
               type="submit"
-              className="w-full bg-primary px-6 py-4 text-xs font-semibold uppercase tracking-[0.18em] text-white hover:bg-[#3b4a45]"
+              className="w-full rounded-[0.2rem] bg-primary px-6 py-4 text-xs font-semibold uppercase tracking-[0.18em] text-white shadow-[0_18px_35px_rgba(19,33,29,0.14)] hover:-translate-y-0.5 hover:bg-[#24332f]"
             >
               Send Inquiry
             </button>
@@ -247,18 +269,37 @@ export function HomePage() {
         </div>
       </section>
 
-      <footer className="bg-[#f5f3f2] px-6 py-12 text-center md:px-16">
-        <div className="flex flex-col items-center gap-8">
-          <div className="font-display text-[28px] leading-[1.3] text-primary">Ajjoria</div>
-          <nav className="flex flex-wrap justify-center gap-8">
-            {['Collections', 'Sustainability', 'Bespoke Service', 'Contact'].map((item) => (
-              <a key={item} href="#" className="text-sm tracking-wide text-[#765928] hover:text-primary">
-                {item}
+      <footer className="bg-[#f5f3f2] px-6 py-14 text-center md:px-16">
+        <div className="mx-auto flex max-w-[1280px] flex-col items-center gap-8">
+          <div className="space-y-2">
+            <div className="font-display text-[28px] leading-[1.3] text-primary">Ajjoria</div>
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#8e7652]">
+              Premium Gifting from Dehradun, India
+            </p>
+          </div>
+          <nav className="flex flex-wrap justify-center gap-x-8 gap-y-3">
+            {[
+              { label: 'Collections', href: '#collections' },
+              { label: 'Story', href: '#story' },
+              { label: 'Bespoke Service', href: '#contact' },
+              { label: 'Contact', href: '#contact' },
+            ].map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                className="link-underline text-sm tracking-[0.08em] text-[#765928] hover:text-primary"
+              >
+                {item.label}
               </a>
             ))}
           </nav>
-          <div className="h-px w-full max-w-md bg-border/70" />
-          <p className="text-sm tracking-wide text-foreground">© Ajjoria. Gifts That Feel Intentional.</p>
+          <div className="h-px w-full max-w-lg bg-border/70" />
+          <div className="space-y-2 text-sm tracking-wide text-foreground/80">
+            <p>&copy; Ajjoria. Gifts That Feel Intentional.</p>
+            <a href="mailto:ajjoria.shoppe@gmail.com" className="link-underline text-[#765928] hover:text-primary">
+              ajjoria.shoppe@gmail.com
+            </a>
+          </div>
         </div>
       </footer>
 
