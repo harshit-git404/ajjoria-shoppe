@@ -1,20 +1,30 @@
 import { Outlet } from 'react-router-dom';
 
-import { ThemeToggle } from '@/shared/components/theme-toggle';
-
 export function AppShell() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <header className="border-b border-border/60 bg-background/80 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-          <div>
-            <p className="text-sm font-medium text-muted-foreground">Business Website Starter</p>
-            <h1 className="text-lg font-semibold tracking-tight">Ajjoria Shoppe</h1>
+      <header className="sticky top-0 z-20 border-b border-border/80 bg-background/90 backdrop-blur-sm">
+        <div className="container-luxury flex items-center justify-between py-6">
+          <div className="space-y-1">
+            <p className="eyebrow text-muted-foreground">Quiet luxury essentials</p>
+            <h1 className="font-display text-xl tracking-[0.04em] text-primary">Ajjoria Shoppe</h1>
           </div>
-          <ThemeToggle />
+
+          <nav className="hidden items-center gap-10 text-sm text-muted-foreground md:flex">
+            <a href="#collection" className="relative pb-4 text-primary">
+              Collection
+              <span className="absolute left-1/2 top-full size-2 -translate-x-1/2 rounded-full bg-secondary" />
+            </a>
+            <a href="#story" className="pb-4 hover:text-primary">
+              Story
+            </a>
+            <a href="#ritual" className="pb-4 hover:text-primary">
+              Ritual
+            </a>
+          </nav>
         </div>
       </header>
-      <main className="mx-auto flex min-h-[calc(100vh-73px)] w-full max-w-7xl flex-col px-4 py-8 sm:px-6 lg:px-8">
+      <main className="relative">
         <Outlet />
       </main>
     </div>
