@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700');
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
@@ -152,6 +153,28 @@
 
   .section-stack {
     padding-block: 80px;
+  }
+
+  .hero-gradient {
+    background: linear-gradient(180deg, #13211d 0%, #3b4a45 100%);
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings:
+      'FILL' 0,
+      'wght' 300,
+      'GRAD' 0,
+      'opsz' 24;
+    line-height: 1;
   }
 }
 
