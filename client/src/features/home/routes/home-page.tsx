@@ -1,3 +1,6 @@
+import logoMark from '@/assets/branding/logo.png';
+import logoWithTagline from '@/assets/branding/logo-with-tagline.png';
+
 const experiences = [
   {
     title: 'Welcome',
@@ -59,6 +62,13 @@ export function HomePage() {
     <div className="pb-16 md:pb-0">
       <section className="hero-gradient relative flex min-h-[751px] items-center justify-center overflow-hidden px-6 text-center md:px-16">
         <div className="relative z-10 mx-auto max-w-2xl">
+          <img
+            src={logoWithTagline}
+            alt="Ajjoria logo with tagline"
+            width={1102}
+            height={644}
+            className="mx-auto mb-8 h-auto w-[min(280px,70vw)] object-contain opacity-92 md:mb-10 md:w-[320px]"
+          />
           <span className="mb-6 block text-xs font-semibold uppercase tracking-[0.2em] text-[#e7c185]">
             Bespoke Corporate Artistry
           </span>
@@ -271,8 +281,17 @@ export function HomePage() {
 
       <footer className="bg-[#f5f3f2] px-6 py-14 text-center md:px-16">
         <div className="mx-auto flex max-w-[1280px] flex-col items-center gap-8">
-          <div className="space-y-2">
-            <div className="font-display text-[28px] leading-[1.3] text-primary">Ajjoria</div>
+          <div className="space-y-3">
+            <div className="flex items-center justify-center gap-2.5">
+              <img
+                src={logoMark}
+                alt="Ajjoria logo"
+                width={1074}
+                height={622}
+                className="h-8 w-auto object-contain"
+              />
+              <div className="font-display text-[28px] leading-[1.3] text-primary">Ajjoria</div>
+            </div>
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#8e7652]">
               Premium Gifting from Dehradun, India
             </p>

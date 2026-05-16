@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router-dom';
+import logoMark from '@/assets/branding/logo.png';
 
 export function AppShell() {
   return (
@@ -14,17 +15,22 @@ export function AppShell() {
               menu
             </span>
           </button>
-          <div className="flex flex-col items-center gap-1">
-            <span className="text-[10px] font-semibold uppercase tracking-[0.34em] text-[#8e7652]">
-              Curated Gifting
-            </span>
-            <a
-              href="#"
-              className="font-display text-[30px] leading-none tracking-[-0.035em] text-primary md:text-[32px]"
-            >
+          <a
+            href="#"
+            className="group flex items-center gap-2.5 rounded-full px-2 py-1.5 hover:bg-white/35"
+            aria-label="Ajjoria home"
+          >
+            <img
+              src={logoMark}
+              alt="Ajjoria logo"
+              width={1074}
+              height={622}
+              className="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02] md:h-9"
+            />
+            <span className="font-display text-[28px] leading-none tracking-[-0.035em] text-primary md:text-[30px]">
               Ajjoria
-            </a>
-          </div>
+            </span>
+          </a>
           <button
             type="button"
             aria-label="Open bag"
