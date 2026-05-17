@@ -1,0 +1,21 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Ajjoria — Thoughtful Corporate Gifting</title>
+  <desc id="desc">A premium branded social preview for Ajjoria.</desc>
+  <rect width="1200" height="630" fill="#13211D" />
+  <circle cx="1048" cy="114" r="140" fill="#E7C185" fill-opacity="0.12" />
+  <circle cx="148" cy="520" r="180" fill="#E7C185" fill-opacity="0.08" />
+  <path d="M0 430C168 336 336 336 504 430C672 524 840 524 1200 410V630H0V430Z" fill="#E7C185" fill-opacity="0.07" />
+  <g transform="translate(100 112)">
+    <rect x="0" y="0" width="160" height="160" rx="34" fill="#E7C185" fill-opacity="0.12" />
+    <path d="M42 58L80 40L118 58V102L80 120L42 102V58Z" stroke="#E7C185" stroke-width="5" stroke-linejoin="round" />
+    <path d="M80 40V120" stroke="#E7C185" stroke-width="5" stroke-linecap="round" />
+    <path d="M42 58L80 78L118 58" stroke="#E7C185" stroke-width="5" stroke-linejoin="round" />
+  </g>
+  <text x="300" y="248" fill="#F6F1E8" font-size="74" font-family="Georgia, 'Times New Roman', serif" letter-spacing="-1.2">Ajjoria</text>
+  <text x="300" y="308" fill="#E7C185" font-size="24" font-family="Inter, Arial, sans-serif" letter-spacing="3.6">THOUGHTFUL CORPORATE GIFTING</text>
+  <text x="300" y="390" fill="#D7E0DC" font-size="32" font-family="Inter, Arial, sans-serif">
+    <tspan x="300" dy="0">Ajjoria creates thoughtful corporate gifting experiences</tspan>
+    <tspan x="300" dy="46">designed to make professional appreciation feel more meaningful.</tspan>
+  </text>
+  <text x="300" y="512" fill="#A9BBB3" font-size="22" font-family="Inter, Arial, sans-serif" letter-spacing="1.2">Premium gifting for modern workplaces</text>
+</svg>
