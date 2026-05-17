@@ -1,3 +1,5 @@
+import { Leaf, Package, Heart, Clock } from 'lucide-react';
+
 import logoMark from '@/assets/branding/logo.png';
 import logoWithTagline from '@/assets/branding/logo-with-tagline.png';
 
@@ -185,6 +187,62 @@ export function HomePage() {
                 />
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-spacing bg-[#f5f3f2] px-6 md:px-16">
+        <div className="mx-auto max-w-[1280px] space-y-12">
+          <div className="text-center">
+            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-outline">Sustainability</span>
+            <h2 className="section-heading mt-2 font-display text-primary">Conscious Consumption</h2>
+            <p className="mx-auto mt-8 max-w-2xl text-[18px] leading-[1.6] text-muted-foreground">
+              We believe in gifting that leaves a lasting impression without creating unnecessary waste. Ajjoria
+              focuses on thoughtful sourcing, enduring materials, low-waste packaging, and objects designed to be
+              valued for years rather than moments.
+            </p>
+            <div className="mx-auto mt-10 h-px w-24 bg-primary/12" />
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                icon: Leaf,
+                title: 'Circular Design',
+                description: 'Thoughtfully crafted items built to last and adapt across seasons and purposes.',
+              },
+              {
+                icon: Package,
+                title: 'Plastic-Free Packaging',
+                description: 'Compostable materials and minimalist design reduce environmental footprint.',
+              },
+              {
+                icon: Heart,
+                title: 'Thoughtful Sourcing',
+                description: 'We partner with artisans who share our values around quality and sustainability.',
+              },
+              {
+                icon: Clock,
+                title: 'Long-Term Utility',
+                description: 'Gifts that age gracefully and remain relevant across the years.',
+              },
+            ].map((item) => {
+              const Icon = item.icon;
+              return (
+                <article
+                  key={item.title}
+                  className="group flex flex-col items-start space-y-4 rounded-[0.5rem] border border-primary/8 bg-background/45 p-6 shadow-[0_8px_24px_rgba(19,33,29,0.03)] transition-all duration-500 ease-out hover:-translate-y-0.5 hover:border-[#c8a46b]/35 hover:bg-background/65 md:p-8"
+                >
+                  <div className="rounded-full border border-primary/10 bg-[#f3f0eb] p-3 transition-all duration-500 ease-out group-hover:border-[#c8a46b]/30 group-hover:bg-[#f3f0eb]">
+                    <Icon className="h-6 w-6 text-primary transition-colors duration-500 group-hover:text-[#c8a46b]" strokeWidth={1.5} />
+                  </div>
+                  <h3 className="font-display text-lg leading-[1.3] text-primary">{item.title}</h3>
+                  <p className="text-sm leading-[1.6] text-muted-foreground transition-colors duration-500 group-hover:text-muted-foreground/90">
+                    {item.description}
+                  </p>
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>
